@@ -1,1 +1,1 @@
-# react-redux-saga-blog-example
+# React Redux Saga boilerplate
