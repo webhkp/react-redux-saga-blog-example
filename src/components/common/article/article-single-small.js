@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux';
+import { Link } from 'react-router-dom';
 
 class ArticleSingleSmall extends Component{
   render() {
     return (
       <div className='home'>
-        <h3>{ this.props.title }</h3>
+        <Link to={`/${this.props.slug}`}>
+          <h3>{ this.props.title }</h3>
+        </Link>
         <div>{this.props.excerpt}</div>
         <hr />
       </div>

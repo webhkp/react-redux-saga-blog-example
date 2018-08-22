@@ -1,10 +1,10 @@
 import {combineReducers} from 'redux';
 import ArticleListReducer from './article-list';
-// import ActiveUserReducer from './reducer-active-user'
+import ArticleReducer from './article';
 
 const indexReducer = combineReducers({
     articleList: ArticleListReducer,
-    // activeUser: ActiveUserReducer
+    article: ArticleReducer
 })
 
 export default indexReducer;

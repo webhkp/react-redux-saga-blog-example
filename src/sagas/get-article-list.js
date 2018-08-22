@@ -6,10 +6,9 @@ function* getArticleList () {
 
 function* getListOfArticle (action) {
   try {
-      // console.log('agc');
       const { page } = action;
-
       const response = yield call(callArticleListApi, action);
+
       yield put({ type: 'GET_ARTICLE_LIST_SUCCESS', payload: response });
   } catch (error) {
       yield put({ type: 'GET_ARTICLE_LIST_ERROR', error });
