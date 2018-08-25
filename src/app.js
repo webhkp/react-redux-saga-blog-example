@@ -11,7 +11,7 @@ import Article from './components/pages/article';
 const App = ({store}) => (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+            <img src={logo} className="App-logo" alt="logo" />
         </header>
         <section className="App-body">
             <Provider store={store}>
