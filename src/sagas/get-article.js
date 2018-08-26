@@ -1,4 +1,5 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
+import {API_URL} from '../config/config';
 
 function* getArticleList () {
   yield takeLatest('GET_ARTICLE_SINGLE', getSingleArticle);
@@ -15,15 +16,13 @@ function* getSingleArticle (action) {
   }
 }
 function callArticleApi (articleParam = {}) {
-    return fetch(`http://localhost:3030/article?slug=${articleParam.slug}&$limit=1`, {
+    return fetch(`${API_URL}/article?slug=${articleParam.slug}&$limit=1`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
         },
       })
-      // .then(handleApiErrors) // we'll make this in a second
       .then(response => response.json())
-      .then(json => json)
       .catch((error) => { throw error });
 }
 

@@ -16,7 +16,7 @@ class ArticleList extends Component{
   }
   render() {
     return (
-      <div className='articleList'>
+      <div className='row'>
         { this.getArticleList() }
       </div>
     )

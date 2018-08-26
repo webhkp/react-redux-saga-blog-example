@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 class ArticleSingleSmall extends Component{
   render() {
     return (
-      <div className='home'>
+      <div className='col-md-12'>
         <Link to={`/${this.props.slug}`}>
           <h3>{ this.props.title }</h3>
         </Link>
