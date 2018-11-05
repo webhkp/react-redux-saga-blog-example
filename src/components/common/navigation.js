@@ -28,4 +28,4 @@ export default connect(state => {
       article_id: article.id || null,
       article_slug: article.slug || null,
     }
-  })(Navigation);
+})(Navigation);

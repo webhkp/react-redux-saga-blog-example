@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './assets/images/logo.svg';
 import './assets/styles/app.scss';
 import Navigation from "./components/common/navigation";
 import { Provider } from 'react-redux';
@@ -10,6 +9,8 @@ import Article from './components/pages/article';
 import Header from './components/common/header';
 import NotFound from './components/pages/not-found';
 import About from './components/pages/about';
+import Global from './components/common/global';
+import Footer from './components/common/footer';
 
 const App = ({store}) => (
     <div className="App container">
@@ -28,6 +29,9 @@ const App = ({store}) => (
                             <Route path="/:slug" exact component={Article} />
                         </Switch>
                     </div>
+
+                    <Footer />
+                    <Global />
                 </div>
             </Router>
         </Provider>

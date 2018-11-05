@@ -7,7 +7,7 @@ class Article extends Component {
     this.props.dispatch({
       type: 'GET_ARTICLE_SINGLE',
       slug: this.props.match.params.slug
-    })
+    });
   }
   render() {
     return (
